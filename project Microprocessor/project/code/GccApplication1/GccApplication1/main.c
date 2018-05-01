@@ -20,7 +20,7 @@ int main(void)
 	 PORTC = 0x00;
 	 PORTB=0x38;
 	 PORTD=0x03;
-
+	
 	
 
 	 	
@@ -76,8 +76,8 @@ int main(void)
 	PORTC&=~(1<<PORTC2);
 	_delay_ms(100);
 
-	//motor//
-	PORTB=0b01101101;//m
+	//Motor//
+	PORTB=0b01001101;//M
 	PORTC|=(1<<PORTC2);
 	PORTC&=~(1<<PORTC2);
 	_delay_ms(100);
@@ -240,9 +240,9 @@ int main(void)
 				
 				
 	}
-
 	
-		if(PIND==0x02)
+	
+		else if(PIND==0x02)
 		{
 		
 		
@@ -292,8 +292,8 @@ int main(void)
 		PORTC&=~(1<<PORTC2);
 		_delay_ms(100);
 
-		//motor//
-		PORTB=0b01101101;//m
+		//Motor//
+		PORTB=0b01001101;//M
 		PORTC|=(1<<PORTC2);
 		PORTC&=~(1<<PORTC2);
 		_delay_ms(100);
@@ -458,6 +458,193 @@ int main(void)
 		
 			
 			}
+
+			else  {PORTC|=(1<<PORTC2);
+				PORTC&=~(1<<PORTC2);
+				_delay_ms(100);
+
+				PORTB=0x01; //clear
+				PORTC|=(1<<PORTC2);
+				PORTC&=~(1<<PORTC2);
+				_delay_ms(100);
+				
+				PORTB=0x0f; //caser is ON
+				PORTC|=(1<<PORTC2);
+				PORTC&=~(1<<PORTC2);
+				_delay_ms(50);
+
+				PORTB=0x80; //start line 1 from 1 letter
+				PORTC|=(1<<PORTC2);
+				PORTC&=~(1<<PORTC2);
+				_delay_ms(200);
+
+				
+				
+				PORTC|=(1<<PORTC0); //RS=1 data entrry
+
+				//The //
+				PORTB=0b01010100;//T
+				PORTC|=(1<<PORTC2);
+				PORTC&=~(1<<PORTC2);
+				_delay_ms(100);
+
+				
+				PORTB=0b01101000;//h
+				PORTC|=(1<<PORTC2);
+				PORTC&=~(1<<PORTC2);
+				_delay_ms(100);
+
+				PORTB=0b01100101;//e
+				PORTC|=(1<<PORTC2);
+				PORTC&=~(1<<PORTC2);
+				_delay_ms(100);
+
+				PORTB=0b00100000;//space
+				PORTC|=(1<<PORTC2);
+				PORTC&=~(1<<PORTC2);
+				_delay_ms(100);
+
+				//Motor//
+				PORTB=0b01001101;//M
+				PORTC|=(1<<PORTC2);
+				PORTC&=~(1<<PORTC2);
+				_delay_ms(100);
+
+				
+				PORTB=0b01101111;//o
+				PORTC|=(1<<PORTC2);
+				PORTC&=~(1<<PORTC2);
+				_delay_ms(100);
+
+				PORTB=0b01110100;//t
+				PORTC|=(1<<PORTC2);
+				PORTC&=~(1<<PORTC2);
+				_delay_ms(100);
+
+				PORTB=0b01101111;//o
+				PORTC|=(1<<PORTC2);
+				PORTC&=~(1<<PORTC2);
+				_delay_ms(100);
+
+				PORTB=0b01110010;//r
+				PORTC|=(1<<PORTC2);
+				PORTC&=~(1<<PORTC2);
+				_delay_ms(100);
+
+				PORTB=0b00100000;//space
+				PORTC|=(1<<PORTC2);
+				PORTC&=~(1<<PORTC2);
+				_delay_ms(100);
+				 
+				 //are// 
+				 		
+				 		PORTB=0b01100001;//a
+				 		PORTC|=(1<<PORTC2);
+				 		PORTC&=~(1<<PORTC2);
+				 		_delay_ms(100);
+
+
+				 PORTB=0b01110010;//r
+				 PORTC|=(1<<PORTC2);
+				 PORTC&=~(1<<PORTC2);
+
+
+				 _delay_ms(100);
+				 PORTB=0b01100101;//e
+				 PORTC|=(1<<PORTC2);
+				 PORTC&=~(1<<PORTC2);
+				 _delay_ms(100);
+					
+					
+					PORTB=0b00100000;//space
+					PORTC|=(1<<PORTC2);
+					PORTC&=~(1<<PORTC2);
+					_delay_ms(100);
+
+					PORTC=0x00;
+					PORTB=0xC0; //start line 2 from 1 letter
+					PORTC|=(1<<PORTC2);
+					PORTC&=~(1<<PORTC2);
+					_delay_ms(100);
+
+
+					PORTC|=(1<<PORTC0); //RS=1 data entrry
+
+					PORTB=0b00100000;//space
+					PORTC|=(1<<PORTC2);
+					PORTC&=~(1<<PORTC2);
+					_delay_ms(100);
+
+					PORTB=0b00100000;//space
+					PORTC|=(1<<PORTC2);
+					PORTC&=~(1<<PORTC2);
+					_delay_ms(100);
+
+					PORTB=0b00100000;//space
+					PORTC|=(1<<PORTC2);
+					PORTC&=~(1<<PORTC2);
+					_delay_ms(100);
+
+					PORTB=0b00100000;//space
+					PORTC|=(1<<PORTC2);
+					PORTC&=~(1<<PORTC2);
+					_delay_ms(100);
+
+					PORTB=0b00100000;//space
+					PORTC|=(1<<PORTC2);
+					PORTC&=~(1<<PORTC2);
+					_delay_ms(100);
+
+						//Stop//
+						
+						PORTB=0b01010011;//S
+						PORTC|=(1<<PORTC2);
+						PORTC&=~(1<<PORTC2);
+						_delay_ms(100);
+
+						
+						PORTB=0b01110100;//t
+						PORTC|=(1<<PORTC2);
+						PORTC&=~(1<<PORTC2);
+						_delay_ms(100);
+
+
+
+						
+						PORTB=0b01101111;//o
+						PORTC|=(1<<PORTC2);
+						PORTC&=~(1<<PORTC2);
+						_delay_ms(100);
+
+
+						PORTB=0b01110000;//p
+						PORTC|=(1<<PORTC2);
+						PORTC&=~(1<<PORTC2);
+						_delay_ms(100);
+						
+
+						PORTB=0b00100000;//space
+						PORTC|=(1<<PORTC2);
+						PORTC&=~(1<<PORTC2);
+						_delay_ms(100);
+
+						PORTB=0b00100000;//space
+						PORTC|=(1<<PORTC2);
+						PORTC&=~(1<<PORTC2);
+						_delay_ms(100);
+PORTB=0b00100000;//space
+PORTC|=(1<<PORTC2);
+PORTC&=~(1<<PORTC2);
+_delay_ms(100);
+
+					
+					//Stops Motor
+					PORTC = 0x18; //0011000
+					_delay_ms(1000);
+			}
+			
+
+			
 
 		PORTB=0x01; //clear
 		PORTC|=(1<<PORTC2);
