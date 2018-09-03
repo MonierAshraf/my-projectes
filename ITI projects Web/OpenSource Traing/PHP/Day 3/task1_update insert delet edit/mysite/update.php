@@ -1,9 +1,5 @@
 
 
-
-//insert
-
-
 <?php
 
 $dsn="mysql:host=localhost;dbname=d1";
@@ -19,7 +15,7 @@ $id=@($_POST['id']);
     $subject = @($_POST["subject"]);
     $message = @($_POST["message"]);
 
-    $q="Update products Set name ='$name',email='$email',mobile='$mobile',subject='$subject',message='$message' where  id='$id'";
+    $q="Update products Set name ='$name',email='$email',mobile='$mobile',subject='$subject',message='$message' where  id=$id";
     $com->exec($q);
     header('location:select.php');
 }

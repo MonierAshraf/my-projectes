@@ -19,8 +19,9 @@ try{
     $com=new PDO($dsn,$username,$password);
 
    $id=@($_GET['id']);
-    $sql="DELETE FROM products where id=$id";
+    $sql="DELETE FROM products where id=$id";//what your mean
     $com->exec($sql);
+    header('location:select.php');
 
 
 }
