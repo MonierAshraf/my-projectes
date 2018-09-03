@@ -47,6 +47,7 @@
 </head>
 <body>
 <a href="select.php">Show Data Base </a>
+
 <div class="container">
     <div class="col-md-5">
         <div class="form-area">
@@ -71,6 +72,7 @@
                 </div>
 
                 <button type="submit" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
+
             </form>
         </div>
     </div>
