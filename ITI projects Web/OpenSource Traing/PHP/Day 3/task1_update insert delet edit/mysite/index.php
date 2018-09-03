@@ -46,7 +46,6 @@
 
 </head>
 <body>
-<a href="select.php">Show Data Base </a>
 
 <div class="container">
     <div class="col-md-5">
@@ -71,7 +70,11 @@
                     <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>
                 </div>
 
-                <button type="submit" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
+                <button style='margin-right: 40px;'   type="submit" id="submit" name="submit" class="btn btn-primary pull-right">Submit Data</button>
+
+
+                <button style='margin-right: 80px' type="button"  class="btn btn-primary pull-right" onclick="window.location.href='select.php'">Show Data</button>
+
 
             </form>
         </div>
