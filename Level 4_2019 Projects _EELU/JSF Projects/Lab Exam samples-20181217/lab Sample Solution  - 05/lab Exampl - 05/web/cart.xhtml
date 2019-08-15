@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title></title>
+    </h:head>
+    <h:body>
+        <h1>  Hi Mr:<h:outputText value="#{userCart.name}"/></h1>
+        <br/> 
+        Date : <h:outputText value="#{userCart.date}">
+            <f:convertDateTime pattern="dd/MM/yyyy"/>
+        </h:outputText>
+        <br/>
+        <h2> Your Cart has the following Products : </h2>
+        <ui:repeat value="#{userCart.products}" var="product"><br/>
+            #{product}
+        </ui:repeat>
+    </h:body>
+</html>
+

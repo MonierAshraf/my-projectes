@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+       <h:form>
+          Enter value in G/B <h:inputText value="#{bMIbean.enteredValue}" required="true" converterMessage="you must enter a number value not else" requiredMessage="you must enter a value">
+               <f:convertNumber maxFractionDigits="3" maxIntegerDigits="7"/>
+           </h:inputText>
+               <br/>
+               <br/>
+      please choose Conversion metrics :  <h:selectOneRadio value="#{bMIbean.conversionType}" required="true" requiredMessage="you must choose the conversion metric ">
+                <f:selectItem itemLabel="M/B" itemValue="1"/>
+              <f:selectItem itemLabel="K/B" itemValue="2"/>
+              <f:selectItem itemLabel="B" itemValue="3"/>
+           </h:selectOneRadio>
+           
+           <h:commandButton value="Convret" action="result.xhtml"/>
+       </h:form>
+        
+        
+    </h:body>
+</html>
+

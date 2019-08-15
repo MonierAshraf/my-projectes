@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    
+    <h:body>
+        Hello from Facelets
+   
+    <h:form>
+    Name : <h:inputText value="#{user.name}"/>
+    Address : <h:inputText value="#{user.adress}"/>
+    
+    <h:selectManyCheckbox value="#{user.sp}">
+    
+    <f:selectItem itemValue="IT" itemLabel="Information Technology"/>
+      <f:selectItem itemValue="IS" itemLabel="Information Systems"/>
+        <f:selectItem itemValue="CS" itemLabel="Information Science"/>
+          <f:selectItem itemValue="Mult Media" itemLabel="MultiMedia"/>
+            <f:selectItem itemValue="SWE" itemLabel="Software Enginerring"/>
+          
+       </h:selectManyCheckbox>
+    <!--
+    
+    Gender <h:selectOneRadio value="user.gender}">
+        <f:selectItem itemValue="Female" itemLabel="Female"/>
+        <f:selectItem itemValue="Male" itemLabel="Male"/>
+    </h:selectOneRadio>
+    -->
+   
+    Country <h:selectOneListbox value="#{user.country}">
+        <f:selectItem itemValue="Egypt" itemLabel="Egypt"/>
+         <f:selectItem itemValue="USA" itemLabel="USA"/>
+        <f:selectItem itemValue="France" itemLabel="France"/>
+
+    </h:selectOneListbox>
+    
+   
+       Country <h:selectOneMenu value="#{user.country}">
+        <f:selectItem itemValue="Egypt" itemLabel="Egypt"/>
+         <f:selectItem itemValue="USA" itemLabel="USA"/>
+        <f:selectItem itemValue="France" itemLabel="France"/>
+</h:selectOneMenu >
+
+    
+    
+    <h:commandButton value="sub" action="welcome"/>
+    </h:form>
+     </h:body>
+</html>
+

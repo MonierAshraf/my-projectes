@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <table>
+                <tr>
+                    <td>
+                        First name
+                    </td>
+                    <td>
+                        <h:inputText value="#{user.firstName}">
+                            <f:validateLength minimum="3"/>
+                        </h:inputText>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Last name
+                    </td>
+                    <td>
+                        <h:inputText value="#{user.lastName}">
+                            <f:validateLength minimum="3"/>
+                        </h:inputText>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Starting place
+                    </td>
+                    <td>
+                        <h:selectOneMenu value="#{user.startingPlace}">
+                            <f:selectItem itemLabel="Tanta" itemValue="Tanta"/>
+                            <f:selectItem itemLabel="Cairo" itemValue="Cairo"/>
+                            <f:selectItem itemLabel="Assuit" itemValue="Assuit"/>
+                        </h:selectOneMenu>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Ending place
+                    </td>
+                    <td>
+                        <h:selectOneMenu value="#{user.endingPlace}">
+                            <f:selectItem itemLabel="Tanta" itemValue="Tanta"/>
+                            <f:selectItem itemLabel="Cairo" itemValue="Cairo"/>
+                            <f:selectItem itemLabel="Assuit" itemValue="Assuit"/>
+                        </h:selectOneMenu>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Journey Date
+                    </td>
+                    <td>
+                        <h:inputText value="#{user.date}">
+                            <f:convertDateTime pattern="MM/yyyy"/>
+                        </h:inputText>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Type
+                    </td>
+                    <td>
+                        <h:selectOneRadio value="#{user.type}">
+                            <f:selectItem itemLabel="One way trip" itemValue="One way trip"/>
+                            <f:selectItem itemLabel="Round trip" itemValue="Round trip"/>
+                        </h:selectOneRadio>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Passengers
+                    </td>
+                    <td>
+                        <h:inputText value="#{user.passangers}">
+                            <f:convertNumber/>
+                            <f:validateLongRange minimum="1" maximum="10"/>
+                        </h:inputText>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Users' Preferences
+                    </td>
+                    <td>
+                        <h:selectManyCheckbox value="#{user.prefrences}">
+                            <f:selectItem itemLabel="Near window" itemValue="Near window"/>
+                            <f:selectItem itemLabel="Passenger opposite you" itemValue="Passenger opposite you"/>
+                            <f:selectItem itemLabel="Silent area" itemValue="Silent area"/>
+                        </h:selectManyCheckbox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h:commandButton value="Submit" action="welcome.xhtml"/>
+                    </td>
+                </tr>
+            </table>
+        </h:form>
+    </h:body>
+</html>
+
