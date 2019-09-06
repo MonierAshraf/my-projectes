@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head >
+<script src="JavaScriptFile.js" type="text/JavaScript"></script>
+
+</head>
+
+<body>
+
+
+
+
+<section>
+<u>
+   <h1>Registration Form</h1>
+</u>
+
+    
+
+<table>
+    <tr>
+        <td> Fist Name </td>
+        <td><input type="text" id="fname"></td>     
+    </tr>
+    <tr>
+        <td> Last Name </td>
+        <td><input type="text" id="lname"></td>
+    </tr>
+  
+<tr>
+<td>
+    Birth Date
+</td>
+
+<td> 
+    <input type="date"  id="date" >
+</td>
+</tr>
+<tr>
+    <td>
+       Country
+    </td>
+<td><select>
+    <option value="choose Yours" selected>[choose Yours]</option>
+    <option value="Assiut">Assiut</option>
+    <option value="Tanta">Tanta</option>
+    <option value="Ain-shams">Ain Shams</option>
+</select></td>
+
+</tr>
+
+<tr>
+    <td>
+        EMail
+    </td>
+    <td><input type="email" id="EMail"></td>
+
+
+</tr>
+
+<tr>
+    <td>Password </td>
+    <td>
+        <input type="password" id="Pass-word" maxlength="5">
+    </td>
+</tr>
+
+<tr>
+    <td> </td>
+    <td>
+        <button  onclick="f1()">Submit</button>
+    </td>
+</tr>
+
+</table>
+
+    <p id="p1"> Thanks, </p>
+    <p id="p2">  User Name : </p>
+    <p id="p3">  Password :</p>
+   
+</section >
+
+
+
+<hr >
+
+<section  >
+<u><h1>Tan Function</h1></u>
+
+<script>
+
+    
+       
+
+        var table = '';
+  
+        for (var i = 0; i <= 10; i++) {
+           
+            table += '<tr>';
+
+            for (var j = 0; j <1; j++) {
+                table += '<td>' + i + '</td>';
+                table += '<td>' + Math.tan(i) + '</td>';
+            }
+
+        
+           
+            table += '</tr>';
+
+         
+        } 
+        
+         
+
+        
+        document.write('<table border="2pd">' + '<tr>'
+            +'<th>' + "#" + '</th>'
+            +'<th>' + "Tan(#)" + '</th>'
+            +'</tr>' +table + '</table>');
+
+           
+
+      
+
+</script>
+
+
+
+
+
+
+
+
+
+<h3>The average value is </h3>
+<table border="1.5pd" style="border-color: grey" id="output">
+
+</table>
+
+
+
+<script>
+
+    var sum = 0;
+
+        for (var i = 0; i < 11; i++) {
+            sum += Math.tan(i);
+        }
+        document.getElementById("output").innerHTML = sum / 10;
+</script>
+
+</section>
+
+ 
+
+    
+
+  
+
+
+
+
+
+</body>
+
+
+
+</html>
